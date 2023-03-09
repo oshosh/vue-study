@@ -23,7 +23,6 @@
 
 <script>
 import { registerUser } from '@/api/index';
-import { validateEmail } from '@/utils/validation';
 
 export default {
   data() {
@@ -36,11 +35,6 @@ export default {
       logMessage: '',
     };
   },
-  computed: {
-    isUsernameValid() {
-      return validateEmail(this.username);
-    },
-  },
   methods: {
     async submitForm() {
       const userData = {
@@ -50,7 +44,7 @@ export default {
       };
       const { data } = await registerUser(userData);
       console.log(data.username);
-      this.logMessage = `${data.username} 님이 가입되었습니다.`;
+      this.logMessage = `${data.username} 님이 가입되었습니다`;
       this.initForm();
     },
     initForm() {

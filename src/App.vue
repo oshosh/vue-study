@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
+  <div class="app">
     <AppHeader></AppHeader>
-    <router-view></router-view>
+    <div class="app-contents">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -9,7 +11,6 @@
 import AppHeader from '@/components/common/AppHeader.vue';
 
 export default {
-  name: 'app',
   components: {
     AppHeader,
   },
