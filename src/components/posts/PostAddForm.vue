@@ -49,7 +49,6 @@ export default {
       } catch (error) {
         this.logMessage = error.response.data.message;
         console.log(error.response.data.message);
-        //
       }
     },
   },
